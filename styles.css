@@ -633,6 +633,7 @@ body {
 }
 
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
   padding: 14px 16px;
   border: 1px solid var(--border);
@@ -645,7 +646,14 @@ body {
   color: var(--text);
 }
 
+.contact-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
 .contact-form input:focus,
+.contact-form select:focus,
 .contact-form textarea:focus {
   border-color: var(--primary);
 }

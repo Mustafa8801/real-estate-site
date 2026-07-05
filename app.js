@@ -374,8 +374,18 @@ document.addEventListener('keydown', e => {
 });
 
 document.getElementById('modalInquire').addEventListener('click', () => {
+  const title = document.getElementById('modalTitle').textContent;
+  const location = document.getElementById('modalLocation').querySelector('span').textContent;
+  const price = document.getElementById('modalPrice').textContent;
   closeModal();
-  showToast('Inquiry sent! We\'ll contact you shortly.');
+
+  document.getElementById('inquiryProperty').value = `${title} - ${location} (${price})`;
+  document.getElementById('inquiryType').value = price.includes('/mo') ? 'rent' : 'buy';
+
+  document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => {
+    contactForm.querySelector('input[name="name"]').focus();
+  }, 600);
 });
 
 mobileToggle.addEventListener('click', () => {

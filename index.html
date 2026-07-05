@@ -173,7 +173,16 @@
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
           <input type="tel" name="phone" placeholder="Your Phone">
-          <textarea name="message" rows="4" placeholder="Tell us what you're looking for..." required></textarea>
+          <select name="inquiry_type" id="inquiryType">
+            <option value="">I'm interested in...</option>
+            <option value="buy">Buying a property</option>
+            <option value="rent">Renting a property</option>
+            <option value="sell">Selling my property</option>
+            <option value="invest">Real estate investment</option>
+            <option value="other">Other inquiry</option>
+          </select>
+          <input type="text" name="property" id="inquiryProperty" placeholder="Property you're interested in (optional)">
+          <textarea name="message" rows="4" placeholder="Tell me what you're looking for..." required></textarea>
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_subject" value="New Inquiry from Alisina Moradi Real Estate">
           <input type="hidden" name="_next" value="https://mustafa8801.github.io/real-estate-site/?sent=true#contact">
